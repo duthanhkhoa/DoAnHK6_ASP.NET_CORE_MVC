@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Voucher>
+
+<section class="breadcrumb-section set-bg" data-setbg="Images/Product/Banner/contact.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2>Danh Sách Khuyến Mãi</h2>
+                    <div class="breadcrumb__option">
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Trang Chủ</a>
+                        <a asp-area="" asp-controller="Home" asp-action="Index">Quay lại</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="featured spad">
+    <div class="container w-75">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4">
+                    <div class="card text-center m-3">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Name</h5>
+                            <p class="card-text">@item.Description</p>
+                            <a href="#" class="btn btn-primary">Sử Dụng Mã</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
